@@ -1,3 +1,4 @@
+//This section was supplied to me by Codecademy
 // All valid credit card numbers
 const valid1 = [4, 5, 3, 9, 6, 7, 7, 9, 0, 8, 0, 1, 6, 8, 0, 8]
 const valid2 = [5, 5, 3, 5, 7, 6, 6, 7, 6, 8, 7, 5, 1, 4, 3, 9]
@@ -24,6 +25,7 @@ const batch = [valid1, valid2, valid3, valid4, valid5, invalid1, invalid2, inval
 
 
 // Add your functions below:
+//The section below is written by me to complete the project.
 const validateCred = numArray => {
     let cardNum = Array.from(numArray);
     let cardLength = cardNum.length;
@@ -81,7 +83,14 @@ const idInvalidCardCompanies = cardBatch => {
     return unique;
 };
 
+console.log(`Test for validateCred function: `);
+console.log(validateCred(valid1));
+console.log(validateCred(invalid1));
+
+console.log(`Test for findInvalidCards: `);
 let invalidCards = findInvalidCards(batch);
-//console.log(invalidCards);
+console.log(invalidCards);
+
+console.log(`Test for idInvalidCardCompanies: `)
 console.log(idInvalidCardCompanies(invalidCards));
 
